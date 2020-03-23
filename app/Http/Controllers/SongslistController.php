@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+// use App\Http\Controllers\DB;
 
-class HomeController extends Controller
+use Illuminate\Http\Request;
+use DB;
+
+class SongslistController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -23,6 +26,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $song = DB::table('songs_metadata_file')->inRandomOrder()->first();
+
+        return view('songslist', ['song' => $song]);
+        // $json = json_decode(file_get_contents('http://host.com/api/stuff/1'), true);
     }
 }
