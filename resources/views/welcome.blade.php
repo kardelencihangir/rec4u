@@ -69,13 +69,19 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Rec4U
+                <a href="/">
+                <img 
+            src="/images/logo.png" 
+            alt="Rec4U">
+            </img>
+                </a>
+                
                 </div>
 
                 <div class="links">
                     
                         @auth
-                            <a href="{{ url('/home') }}">Home</a>
+                            <a href="{{ url('/home') }}">Music List</a>
                         @else
                             <a href="{{ route('login') }}">Login</a>
                             <a href="{{ route('register') }}">Register</a>

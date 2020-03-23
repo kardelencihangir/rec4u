@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Rec4U') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -21,9 +21,12 @@
 </head>
 <body>
     <div id="app">
-    <section class="px-8">
+    <section class="px-8 py-4">
         <header class="container mx-auto">
-            <h1>Rec4U</h1>
+            <img 
+            src="/images/logo.png" 
+            alt="Rec4U">
+            </img>
         </header>
     </section>
 
