@@ -81,7 +81,7 @@
                 <div class="links">
                     
                         @auth
-                            <a href="{{ url('/home') }}">Music List</a>
+                            <a href="{{ url('/songslist') }}">Music List</a>
                         @else
                             <a href="{{ route('login') }}">Login</a>
                             <a href="{{ route('register') }}">Register</a>

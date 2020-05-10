@@ -23,19 +23,17 @@
   <thead>
     <tr>
       <th class="w-1/2 px-4 py-2">Song Title</th>
-      <th class="w-1/4 px-4 py-2">Artist</th>
-      <th class="w-1/4 px-4 py-2">Year</th>
     </tr>
   </thead>
   <tbody>
 
-      @for ($i = 0; $i < 10; $i++)
-    <tr>
-      <td class="border px-4 py-2"> {{$song->title}} </td>
-      <td class="border px-4 py-2">{{$song->artist_name}}</td>
-      <td class="border px-4 py-2 text-center">{{$song->year}}</td>
+  @foreach($songs as $song)
+  <tr>
+      <td class="border px-4 py-2"> {{$song}} </td>
     </tr>
-    @endfor
+  @endforeach
+    
+    
     
   </tbody>
 </table>

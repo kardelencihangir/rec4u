@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Resources\Users as UserResource;
+use App\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +22,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/songslist', 'SongslistController@index')->name('songslist');
+
+Route::get('/user', function () {
+    return UserResource::collection(User::all());
+});
